@@ -46,8 +46,9 @@ body {
 }
 
 /* Whole-page backdrop: the Tetra Tech helicopter photo, fixed behind the
-   content and faded out diagonally so it reads as an ornament, never as
-   a hero image competing with the text. */
+   content like a wallpaper (the page scrolls over it), held at low
+   opacity so it reads as an ornament, never as a hero image competing
+   with the text. Covers the full viewport, no mask/cutoff. */
 body::before {
   content: "";
   position: fixed;
@@ -56,16 +57,14 @@ body::before {
   background-image: url("photos/tetra-tech-helicopter-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0% 0%;
-  opacity: 0.2;
-  -webkit-mask-image: linear-gradient(135deg, #000 0%, #000 15%, transparent 55%);
-  mask-image: linear-gradient(135deg, #000 0%, #000 15%, transparent 55%);
+  background-position: center;
+  opacity: 0.16;
   pointer-events: none;
 }
 
 @media (prefers-color-scheme: dark) {
   body::before {
-    opacity: 0.25;
+    opacity: 0.22;
     mix-blend-mode: screen;
   }
 }
