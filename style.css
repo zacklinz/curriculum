@@ -55,8 +55,8 @@ body::before {
   z-index: -1;
   background-image: url("photos/tetra-tech-helicopter-bg.jpg");
   background-repeat: no-repeat;
-  background-size: min(60vw, 900px) auto;
-  background-position: -20px -20px;
+  background-size: cover;
+  background-position: 0% 0%;
   opacity: 0.2;
   -webkit-mask-image: linear-gradient(135deg, #000 0%, #000 15%, transparent 55%);
   mask-image: linear-gradient(135deg, #000 0%, #000 15%, transparent 55%);
