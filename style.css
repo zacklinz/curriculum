@@ -54,17 +54,18 @@ body::before {
   inset: 0;
   z-index: -1;
   background-image: url("photos/tetra-tech-helicopter-bg.jpg");
-  background-size: cover;
-  background-position: 30% 20%;
-  opacity: 0.12;
-  -webkit-mask-image: linear-gradient(135deg, #000 0%, #000 12%, transparent 48%);
-  mask-image: linear-gradient(135deg, #000 0%, #000 12%, transparent 48%);
+  background-repeat: no-repeat;
+  background-size: min(60vw, 900px) auto;
+  background-position: -20px -20px;
+  opacity: 0.2;
+  -webkit-mask-image: linear-gradient(135deg, #000 0%, #000 15%, transparent 55%);
+  mask-image: linear-gradient(135deg, #000 0%, #000 15%, transparent 55%);
   pointer-events: none;
 }
 
 @media (prefers-color-scheme: dark) {
   body::before {
-    opacity: 0.16;
+    opacity: 0.25;
     mix-blend-mode: screen;
   }
 }
